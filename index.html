@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>june assignment</title>
+
+    <!-- Insert to your webpage before the </head> -->
+    <script src="sliderengine/jquery.js"></script>
+    <script src="sliderengine/amazingslider.js"></script>
+    <link rel="stylesheet" type="text/css" href="sliderengine/amazingslider-1.css">
+    <script src="sliderengine/initslider-1.js"></script>
+    <!-- End of head section HTML codes -->
     
     <style>
     *{
@@ -147,13 +154,37 @@
         <button class="head-btn">Explore more</button>
       </div>
   </header>
+  <!-- <div class="container" style="border: 2px solid red; height: 400px; width: 95%; margin:20px  auto;"> -->
+     <!-- Insert to your webpage where you want to display the slider -->
+     <div class="amazingslider-wrapper" id="amazingslider-wrapper-1" style="display:block;position:relative;width:100%;margin:0px auto 0px; ">
+        <div class="amazingslider" id="amazingslider-1" style="display:block;position:relative;margin:0 auto;">
+            <ul class="amazingslider-slides" style="display:none;">
+                <li><img src="images/CSS.jpg" alt="CSS"  title="CSS" />
+                </li>
+                <li><img src="images/Html%205%20Elemetn.jpg" alt="Html 5 Elemetn"  title="Html 5 Elemetn" />
+                </li>
+                <li><img src="images/Programming%20Languages.jpg" alt="Programming Languages"  title="Programming Languages" />
+                </li>
+                <li><img src="images/Python%20Commands.jpg" alt="Python Commands"  title="Python Commands" />
+                </li>
+                <li><img src="images/Python.jpg" alt="Python"  title="Python" />
+                </li>
+            </ul>
+            <ul class="amazingslider-thumbnails" style="display:none;">
+                <li><img src="images/CSS-tn.jpg" alt="CSS" title="CSS" /></li>
+                <li><img src="images/Html%205%20Elemetn-tn.jpg" alt="Html 5 Elemetn" title="Html 5 Elemetn" /></li>
+                <li><img src="images/Programming%20Languages-tn.jpg" alt="Programming Languages" title="Programming Languages" /></li>
+                <li><img src="images/Python%20Commands-tn.jpg" alt="Python Commands" title="Python Commands" /></li>
+                <li><img src="images/Python-tn.jpg" alt="Python" title="Python" /></li>
+            </ul>
+        </div>
+    </div>
+    <!-- End of body section HTML codes -->
+  <!-- </div> -->
 
 
 
 
-
-
-  
 <script>
 var navlinks=document.querySelector('.nav-links');
 function menu(){

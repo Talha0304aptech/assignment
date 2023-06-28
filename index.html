@@ -1,271 +1,316 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>june assignment</title>
 
-    <!-- Insert to your webpage before the </head> -->
-    <script src="sliderengine/jquery.js"></script>
-    <script src="sliderengine/amazingslider.js"></script>
-    <link rel="stylesheet" type="text/css" href="sliderengine/amazingslider-1.css">
-    <script src="sliderengine/initslider-1.js"></script>
-    <!-- End of head section HTML codes -->
-    
-    <style>
-    *{
-        padding: 0px;
-        margin: 0px;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>june assignment</title>
+
+  <!-- Insert to your webpage before the </head> -->
+  <script src="sliderengine/jquery.js"></script>
+  <script src="sliderengine/amazingslider.js"></script>
+  <link rel="stylesheet" type="text/css" href="sliderengine/amazingslider-1.css">
+  <script src="sliderengine/initslider-1.js"></script>
+  <!-- End of head section HTML codes -->
+
+  <style>
+    * {
+      padding: 0px;
+      margin: 0px;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     }
-    body,html{
-        overflow-x: hidden;
+
+    body,
+    html {
+      overflow-x: hidden;
     }
-    .navbar{
-       
-        width: 100%;
-       position: absolute;
-       top: 0px;
-       right: 0px;
-       display: flex;
-       justify-content: space-around;
-       align-items: center;
+
+    .navbar {
+
+      width: 100%;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
     }
-    .logo{
-        font-size: 40px;
-        color: rgba(51, 37, 37, 0.76);
+
+    .logo {
+      font-size: 38px;
+      color: rgba(51, 37, 37, 0.76);
     }
-    
-    .nav-links{
-        display: flex;
-        list-style: none;
+
+    .nav-links {
+      display: flex;
+      list-style: none;
     }
-    .nav-links li{
-        padding: 20px;
+
+    .nav-links li {
+      padding: 20px;
     }
-    .nav-links li a{
-    
-        text-decoration: none;
-        color: rgb(51, 37, 37);
+
+    .nav-links li a {
+      font-size: 18px;
+ 
+      text-decoration: none;
+      color: rgba(51, 37, 37, 0.76);
     }
-    
+    .nav-links li a:hover{
+      color: rgba(61, 44, 44, 0.541);
+    }
     /* =========================header----------- */
-    
-    header{
-        background: url('https://www.studiosity.com/hs-fs/hubfs/Studiosity/Studiosity%20Images/Studiosity%20Blog%20Images/Referencing-books.jpeg?width=742&name=Referencing-books.jpeg');
-        height: 100vh;
-        background-size: cover;
-        background-position: bottom;
-        align-items: center;
-        display: flex;
-        justify-content: center;
+
+    header {
+      background: url('https://www.studiosity.com/hs-fs/hubfs/Studiosity/Studiosity%20Images/Studiosity%20Blog%20Images/Referencing-books.jpeg?width=742&name=Referencing-books.jpeg');
+      height: 100vh;
+      background-size: cover;
+      background-position: bottom;
+      align-items: center;
+      display: flex;
+      justify-content: center;
     }
-    
-    .head-content{
-        font-size: 30px;
-        color: rgba(58, 46, 46, 0.733);
-        text-align: center;
+
+    .head-content {
+      font-size: 30px;
+      color: rgba(58, 46, 46, 0.733);
+      text-align: center;
     }
-    
-    .head-btn{
-        background-color: rgb(238, 143, 143);
-        width: 200px;
-        font-size: 20px;
-        height: 50px;
-        border-radius: 30px;
-        border: none;
+
+    .head-btn {
+      background-color: rgb(238, 143, 143);
+      width: 200px;
+      font-size: 20px;
+      height: 50px;
+      border-radius: 30px;
+      border: none;
     }
-    .head-btn:hover{
-        background-color: salmon;
-        color: white;
+
+    .head-btn:hover {
+      background-color: salmon;
+      color: white;
     }
-    .ue{
-        font-size: 40px;
-        color: salmon;
-        text-align: center;
+
+    .ue {
+      font-size: 40px;
+      color: salmon;
+      text-align: center;
     }
-  
-    .menu-btn{
-        top: 30px;
-        right: 90px;
-        position: absolute;
-        width: 50px;
-        display: none;
+
+    .menu-btn {
+      top: 30px;
+      right: 90px;
+      position: absolute;
+      width: 50px;
+      display: none;
     }
 
     .flip-card {
-  background-color: transparent;
-  width: 300px;
-  height: 300px;
-  perspective: 1000px;
-}
+      background-color: transparent;
+      width: 300px;
+      height: 300px;
+      perspective: 1000px;
+    }
 
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-}
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
 
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
+    .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg);
+    }
 
-.flip-card-front, .flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
+    .flip-card-front,
+    .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+    }
 
-.flip-card-front {
-  background-color: #bbb;
-  color: black;
-}
+    .flip-card-front {
+      background-color: #bbb;
+      color: black;
+    }
 
-.flip-card-back {
-  background-color: #2980b9;
-  color: white;
-  transform: rotateY(180deg);
-}
+    .flip-card-back {
+      background-color: #2980b9;
+      color: white;
+      transform: rotateY(180deg);
+    }
+
+    footer {
+      margin-top: 150px;
+      height: 120px;
+      background-color: rgb(35, 45, 73);
+      color: white;
+      text-align: center;
+      padding: 40px 40px 0 40px;
+    }
+
     /* =====================media query============== */
-    
-    @media only screen and (max-width:650px){
-    
-        .menu-btn{
-            display: block;
-            cursor: pointer;
-        }
-        .navbar{
-            padding: 0px;
-        }
-        .nav-links{
-            background-color: rgb(223, 152, 144);
-            color: white;
-             width: 100%;
-            height: 100vh;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            margin-top: -900px;
-            border-bottom-left-radius: 300px;
-            transition: all 0.5s ease;
-        }
-        .logo{
-            top: 30px;
-            left: 30px;
-            position: absolute;
-           
-        }
-        .menu-display{
-            margin-top: 0px;
-        }
-        .row{
-            flex-direction: column;
-        }
-        .col{
-            width: 100%;
-            margin:0px;
-        }
-    }   
-    </style>
+
+    @media only screen and (max-width:650px) {
+
+      .menu-btn {
+        display: block;
+        cursor: pointer;
+      }
+
+      .navbar {
+        padding: 0px;
+      }
+
+      .nav-links {
+        background-color: rgb(223, 152, 144);
+        color: white;
+        width: 100%;
+        height: 100vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: -900px;
+        border-bottom-left-radius: 300px;
+        transition: all 0.5s ease;
+      }
+
+      .logo {
+        top: 30px;
+        left: 30px;
+        position: absolute;
+
+      }
+
+      .menu-display {
+        margin-top: 0px;
+      }
+
+      .row {
+        flex-direction: column;
+      }
+
+      .col {
+        width: 100%;
+        margin: 0px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <nav class="navbar">
-        <h1 class="logo">assignment</h1>
-        <ul class="nav-links">
-            <li><a href="">Home</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">FAQ</a></li>
-            <li><a href="">Contact</a></li>
-        </ul>
-        <img src="https://pixlok.com/wp-content/uploads/2021/07/Menu-SVG-Icon-8djw-300x300.png" alt="" class="menu-btn" onclick="menu()">
-    </nav>
+  <nav class="navbar">
+    <h1 class="logo">assignment</h1>
+    <ul class="nav-links">
+      <li><a href=""><b>Home</b></a></li>
+      <li><a href=""><b>About</b></a></li>
+      <li><a href=""><b>FAQ</b></a></li>
+      <li><a href=""><b>Contact</b></a></li>
+    </ul>
+    <img src="https://pixlok.com/wp-content/uploads/2021/07/Menu-SVG-Icon-8djw-300x300.png" alt="" class="menu-btn"
+      onclick="menu()">
+  </nav>
 
   <header>
-      <div class="head-content">
-        <h2>Study helps you hone your </h2>
-        <h1> skills at work</h1>
-        <button class="head-btn">Explore more</button>
-      </div>
+    <div class="head-content">
+      <h2>Study helps you hone your </h2>
+      <h1> skills at work</h1>
+      <button class="head-btn">Explore more</button>
+    </div>
   </header>
   <!-- <div class="container" style="border: 2px solid red; height: 400px; width: 95%; margin:20px  auto;"> -->
-     <!-- Insert to your webpage where you want to display the slider -->
-     <div class="amazingslider-wrapper" id="amazingslider-wrapper-1" style="display:block;position:relative;width:100%;margin:0px auto 0px; ">
-        <div class="amazingslider" id="amazingslider-1" style="display:block;position:relative;margin:0 auto;">
-            <ul class="amazingslider-slides" style="display:none;">
-                <li><img src="images/CSS.jpg" alt="CSS"  title="CSS" />
-                </li>
-                <li><img src="images/Html%205%20Elemetn.jpg" alt="Html 5 Elemetn"  title="Html 5 Elemetn" />
-                </li>
-                <li><img src="images/Programming%20Languages.jpg" alt="Programming Languages"  title="Programming Languages" />
-                </li>
-                <li><img src="images/Python%20Commands.jpg" alt="Python Commands"  title="Python Commands" />
-                </li>
-                <li><img src="images/Python.jpg" alt="Python"  title="Python" />
-                </li>
-            </ul>
-            <ul class="amazingslider-thumbnails" style="display:none;">
-                <li><img src="images/CSS-tn.jpg" alt="CSS" title="CSS" /></li>
-                <li><img src="images/Html%205%20Elemetn-tn.jpg" alt="Html 5 Elemetn" title="Html 5 Elemetn" /></li>
-                <li><img src="images/Programming%20Languages-tn.jpg" alt="Programming Languages" title="Programming Languages" /></li>
-                <li><img src="images/Python%20Commands-tn.jpg" alt="Python Commands" title="Python Commands" /></li>
-                <li><img src="images/Python-tn.jpg" alt="Python" title="Python" /></li>
-            </ul>
-        </div>
+  <!-- Insert to your webpage where you want to display the slider -->
+  <div class="amazingslider-wrapper" id="amazingslider-wrapper-1"
+    style="display:block;position:relative;width:100%;margin:0px auto 0px; ">
+    <div class="amazingslider" id="amazingslider-1" style="display:block;position:relative;margin:0 auto;">
+      <ul class="amazingslider-slides" style="display:none;">
+        <li><img src="images/CSS.jpg" alt="CSS" title="CSS" />
+        </li>
+        <li><img src="images/Html%205%20Elemetn.jpg" alt="Html 5 Elemetn" title="Html 5 Elemetn" />
+        </li>
+        <li><img src="images/Programming%20Languages.jpg" alt="Programming Languages" title="Programming Languages" />
+        </li>
+        <li><img src="images/Python%20Commands.jpg" alt="Python Commands" title="Python Commands" />
+        </li>
+        <li><img src="images/Python.jpg" alt="Python" title="Python" />
+        </li>
+      </ul>
+      <ul class="amazingslider-thumbnails" style="display:none;">
+        <li><img src="images/CSS-tn.jpg" alt="CSS" title="CSS" /></li>
+        <li><img src="images/Html%205%20Elemetn-tn.jpg" alt="Html 5 Elemetn" title="Html 5 Elemetn" /></li>
+        <li><img src="images/Programming%20Languages-tn.jpg" alt="Programming Languages"
+            title="Programming Languages" /></li>
+        <li><img src="images/Python%20Commands-tn.jpg" alt="Python Commands" title="Python Commands" /></li>
+        <li><img src="images/Python-tn.jpg" alt="Python" title="Python" /></li>
+      </ul>
     </div>
-    <!-- End of body section HTML codes -->
+  </div>
+  <!-- End of body section HTML codes -->
   <!-- </div> -->
-<div style="display: flex; justify-content:  space-evenly; margin: 20px 0;">
-  <div class="flip-card">
-    <div class="flip-card-inner">
-      <div class="flip-card-front">
-        <img src="https://plus.unsplash.com/premium_photo-1674875073285-5eaa2c014f89?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Ym9va3N8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60" alt="Avatar" style="width:300px;height:300px;">
-      </div>
-      <div class="flip-card-back">
-        <h1>John Doe</h1> 
-        <p>Architect & Engineer</p> 
-        <p>We love that guy</p>
-      </div>
-    </div>
-  </div><div class="flip-card">
-    <div class="flip-card-inner">
-      <div class="flip-card-front">
-        <img src="https://images.unsplash.com/photo-1495446815901-a7297e633e8d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Ym9va3N8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60" alt="Avatar" style="width:300px;height:300px;">
-      </div>
-      <div class="flip-card-back">
-        <h1>John Doe</h1> 
-        <p>Architect & Engineer</p> 
-        <p>We love that guy</p>
+  <div style="display: flex; justify-content:  space-evenly; margin: 20px 0;">
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img
+            src="https://plus.unsplash.com/premium_photo-1674875073285-5eaa2c014f89?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Ym9va3N8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
+            alt="Avatar" style="width:300px;height:300px;">
+        </div>
+        <div class="flip-card-back">
+          <h1>John Doe</h1>
+          <p>Architect & Engineer</p>
+          <p>We love that guy</p>
+        </div>
       </div>
     </div>
-  </div><div class="flip-card">
-    <div class="flip-card-inner">
-      <div class="flip-card-front">
-        <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Ym9va3N8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60" alt="Avatar" style="width:300px;height:300px;">
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img
+            src="https://images.unsplash.com/photo-1495446815901-a7297e633e8d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Ym9va3N8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
+            alt="Avatar" style="width:300px;height:300px;">
+        </div>
+        <div class="flip-card-back">
+          <h1>John Doe</h1>
+          <p>Architect & Engineer</p>
+          <p>We love that guy</p>
+        </div>
       </div>
-      <div class="flip-card-back">
-        <h1>John Doe</h1> 
-        <p>Architect & Engineer</p> 
-        <p>We love that guy</p>
+    </div>
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img
+            src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Ym9va3N8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
+            alt="Avatar" style="width:300px;height:300px;">
+        </div>
+        <div class="flip-card-back">
+          <h1>John Doe</h1>
+          <p>Architect & Engineer</p>
+          <p>We love that guy</p>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
+  <footer>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit quod pariatur aut sunt expedita nemo ipsam modi corporis soluta maiores!</p><br>
+   <p style="color: #a3a2a2; margin-top: 10px;" >&copy; 2023</p>
+  </footer>
 
+  <script>
+    var navlinks = document.querySelector('.nav-links');
+    function menu() {
+      navlinks.classList.toggle('menu-display');
+    }
 
-<script>
-var navlinks=document.querySelector('.nav-links');
-function menu(){
-    navlinks.classList.toggle('menu-display');
-}
-
-</script>
+  </script>
 </body>
+
 </html>
